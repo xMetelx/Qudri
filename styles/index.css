@@ -8,14 +8,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-
 .header {
   margin: auto;
   font-family: Roboto, Arial, sans-serif;
   font-style: normal;
   color: #595959;
   background-color: #fff;
-  max-width: 2025px;
+  max-width: 1160px;
   height: 115px;
   display: flex;
   justify-content: space-between;
@@ -60,8 +59,8 @@ align-items: center;
   line-height: 22px;
 }
 
-.arnika-button {
-  
+.arnika-button_photo {
+  margin-bottom: 30px;
 }
 
 /* .adress {
@@ -102,7 +101,7 @@ align-items: center;
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 95vh;
+  height: 100%;
   margin: 0;
   background-image: url(../content/main.jpg);
   display: flex;
@@ -288,7 +287,7 @@ align-items: center;
 
 .about-title {
   margin: 0;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
   font-family: Oranienbaum, serif;
   text-align: center;
   font-weight: 400;
@@ -299,9 +298,13 @@ align-items: center;
 }
 
 .about-list {
+  padding: 0;
+  max-width: 1160px;
+  width: 100%;
   list-style-type: none;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 
 .about-part{
@@ -362,13 +365,14 @@ align-items: center;
   gap: 40px;
   grid-template-columns: repeat(4, 260px);
   grid-template-rows: repeat(2, 260px);
+  padding: 0;
   padding-bottom: 40px;
 }
 
 .nail {
   width: 260px;
   height: 260px;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .signup-example {
@@ -406,14 +410,35 @@ align-items: center;
   width: 100%;
   height: 100%;
   border: none;
+  /* background-color: red; */
   background-image: url(../content/whatsapp-svgrepo-com.svg);
   background-size: cover;
   background-position: center;
   border-radius: 50%;
-  
+  cursor: pointer;
+  box-shadow: 0 0 0 rgba(214, 82, 82, 0.4);
+  animation: radial-pulse 1.5s infinite;
 }
 
-.footer{
+.whatsup-button:hover {
+  animation: none;
+ }
+
+ @keyframes radial-pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(37, 211, 102, 0.5);
+  }
+
+  100% {
+    box-shadow: 0 0 0 40px rgba(255, 255, 255, 0);
+  }
+}
+
+.footer {
+  margin: auto;
+  max-width: 1160px;
+  width: 100%;
+  height: 115px;
   background-color: #fff;
   color: #000;
   font-size: 14px;
@@ -421,7 +446,8 @@ align-items: center;
   line-height: 24px;
   font-family: Roboto, sans-serif;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
   padding: 60px auto;
 }
@@ -463,16 +489,17 @@ align-items: center;
 }
 
 .social {
+  width: 100%;
   padding: 0;
-  padding-top: 16px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 
 .icons {
   margin: 0;
+  margin-left: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -495,11 +522,30 @@ align-items: center;
   width: 100%;
   height: 100%;
   border-radius: 50%;
-
 }
 
 .social-img {
   border-radius: 50%;
   width: 32px;
   height: 32px;
+}
+
+.footer-phone{
+  margin: 5px;
+  margin-left: auto;
+}
+
+.footer-adress-container {
+  margin-left: 10px;
+}
+
+.footer-adress {
+  margin: 5px auto;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .footer {
+    flex-direction: column;
+
+  }
 }
