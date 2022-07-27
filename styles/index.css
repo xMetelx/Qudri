@@ -15,7 +15,9 @@ body {
   color: #595959;
   background-color: #fff;
   max-width: 1160px;
-  height: 115px;
+  width: 100%;
+  max-height: 115px;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center; 
@@ -49,15 +51,16 @@ body {
 }
 
 .contacts {
-display: flex;
-justify-content: center;
-align-items: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .phone {
   max-width: 250px;
   width: 100%;
-  margin: 0;
+  margin: 0 auto;
   text-align: center;
   font-family: Oranienbaum, serif;
   font-weight: 700;
@@ -128,8 +131,6 @@ align-items: center;
   opacity: .5;
   z-index: 1;
 }
-  /* сделать картинку светлее */
-
 
 .title {
   margin: 150px auto 100px;
@@ -232,7 +233,6 @@ align-items: center;
   gap: 40px;
   grid-template-columns: repeat(3, 360px);
   grid-template-rows: repeat(2, 465px);
-
 }
 
 .image {
@@ -494,7 +494,7 @@ align-items: center;
   font-weight: 400;
   font-size: 24px;
   line-height: 36px;
-  margin: 0;
+  margin: auto;
 }
 
 /* .footer-services{
@@ -535,8 +535,8 @@ align-items: center;
 }
 
 .icons {
-  margin: 0;
-  margin-left: auto;
+  margin: auto;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -570,22 +570,196 @@ align-items: center;
 }
 
 .footer-phone{
-  margin: 5px;
-  margin-left: auto;
+  margin: auto;
+
 }
 
-.footer-adress-container {
+/* .footer-adress-container {
   margin-left: 10px;
-}
+} */
 
 .footer-adress {
-  margin: 5px auto;
+  margin: auto;
+}
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .service-cards {
+    gap: 30px;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(2, 400px);
+  }
+
+  .image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .examples-nail-list {
+    gap: 20px;
+    grid-template-columns: repeat(4, 215px);
+    grid-template-rows: repeat(2, 215px);
+  }
+
+  .nail {
+    width: 215px;
+    height: 215px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 640px) {
+  .header {
+    max-width: 640px;
+  }
+
+  .logo {
+    max-width: 170px;
+  }
+
+  .contacts {
+    display: none;
+  }
+
+  .phone {
+    display: none;
+  }
+
+  .title {
+    font-size: 55px;
+    line-height: 83px;
+    margin: 50px auto;
+    max-width: 500px;
+  }
+
+  .description {
+    max-width: 610px;
+    font-size: 17px;
+    line-height: 26px;
+  }
+
+  .services-title {
+    font-size: 30px;
+    line-height: 33px;
+  }
+
+  .services-description {
+    font-size: 18px;
+    line-height: 26px;
+    max-width: 610px;
+  }
+
+  .service-cards {
+    margin-bottom: 10px;
+    gap: 15px;
+    grid-template-columns: repeat(2, 295px);
+    grid-template-rows: repeat(3, 400px);
+  }
+
+  .image {
+    width: 290px;
+    height: 290px;
+  }
+
+  .card-title {
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  .card-description {
+    font-size: 17px;
+    line-height: 34px;
+  }
+
+  .planning {
+    font-size: 18px;
+    line-height: 25px;
+    max-width: 610px;
+  }
+
+  .about {
+    padding: 80px 0;
+  }
+  
+  .about-title{
+    max-width: 290px;
+    font-size: 30px;
+    line-height: 45px;
+  }
+
+  .about-list {
+    max-width: 610px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .about-part {
+    padding: 0;
+    max-width: 290px;
+    width: 100%;
+  }
+
+  .brands-list {
+    margin: auto;
+    padding: 0;
+    flex-direction: row;
+    max-width: 610px;
+  }
+  
+  .brand-card {
+    margin: 20px auto;
+  }
+
+  .nail {
+    width: 295px;
+    height: 295px;
+  }
+
+  .examples-nail-list {
+    gap: 15px;
+    grid-template-columns: repeat(2, 295px);
+    grid-template-rows: repeat(4, 295px);
+  }
+
+  .footer {
+    flex-direction: column;
+    max-width: 640px;
+    height: 100%;
+  }
+
+  .social {
+    max-width: 640px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-title {
+    margin: 20px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .footer-phone{
+    margin: 5px auto;
+  }
+
+  .icons {
+    margin: 5px auto;
+  }
+
+  .whatsup-container {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .header {
     max-width: 480px;
-    width: 100%;
+    max-height: 200px;
+  }
+
+  .logo {
+    max-width: 170px;
   }
 
   .contacts {
@@ -717,4 +891,5 @@ align-items: center;
     height: 60px;
   }
 
+  
 }
