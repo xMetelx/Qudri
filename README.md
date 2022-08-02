@@ -4,4 +4,4 @@
 HTML, CSS <br>
 Адаптивность, анимация, дизайн страницы.
 
-<a href="http://qudri.info.ru">Ссылка на сайт</a>
+<a href="http://qudri.info">Ссылка на сайт</a>
